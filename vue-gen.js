@@ -14,7 +14,7 @@ program
 const [ name, dest ] = program.args;
 
 inquirer.prompt(getQuestions(!!name)).then(answers => {
-  const destination = dest ? dest : __dirname;
+  const destination = dest ? dest : process.cwd();
   const addName = name ? fjp.altAssoc('name', name) : fjp.identity;
   const adArgs = fjp.compose(
     addName,
