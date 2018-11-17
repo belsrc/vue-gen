@@ -1,5 +1,5 @@
 {
-  "name": "vue-component-gen",
+  "name": "vue-gen",
   "version": "1.0.0",
   "description": "Yet another Vue component generator",
   "main": "vue-gen.js",
