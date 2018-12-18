@@ -1,3 +1,5 @@
+☑ Cleaning NPM Scripts
+☑ Git Hooks (precommit:lint, commitmsg:commitlint)
 ☑ More Docs (Contrib, Conduct, Issue Template)
 ☐ Unit Tests
   - Tie into Git hooks
