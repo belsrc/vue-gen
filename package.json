@@ -1,6 +1,6 @@
 {
   "name": "@belsrc/vue-gen",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Yet another Vue component generator",
   "main": "vue-gen.js",
   "bin": {
