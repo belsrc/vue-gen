@@ -57,7 +57,7 @@ Component name is kebab cased for folder/file/css class purposes. And Pascal cas
 
 ## Contributing
 
-Contribute encouraged! Please check out the [contributing guide](CONTRIBUTING.md) for guidelines about how to proceed.
+Contributions encouraged! Please check out the [contributing guide](CONTRIBUTING.md) for guidelines about how to proceed.
 
 Trying to report an issue? Please use the [issue template](ISSUE_TEMPLATE.md).
 
@@ -68,19 +68,3 @@ Everyone interacting in the Vue Component Generator codebase and issue tracking 
 Vue-gen is licensed under the [MIT license](LICENSE).
 
 Copyright © 2018 Bryan Kizer
-
-```
-Vue-gen is licensed under the MIT license.
-
-Copyright © 2018 Bryan Kizer
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"),
-to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
-and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-```
