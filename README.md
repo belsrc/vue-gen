@@ -1,4 +1,4 @@
-# Vue Component Generator [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/belsrc/vue-gen/pulls)
+# Vue Component Generator [![Maintainability](https://api.codeclimate.com/v1/badges/417464a612c51247901d/maintainability)](https://codeclimate.com/github/belsrc/vue-gen/maintainability) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/belsrc/vue-gen/pulls)
 
 Generate new Vue components from the command line.
 
@@ -55,7 +55,19 @@ Component name is kebab cased for folder/file/css class purposes. And Pascal cas
 
 `Does component have state?`, if yes, will add `import { mapState, mapGetters, mapActions } from 'vuex';` along with the corresponding `...mapX({})` calls.
 
+## Contributing
+
+Contribute encouraged! Please check out the [contributing guide](CONTRIBUTING.md) for guidelines about how to proceed.
+
+Trying to report an issue? Please use the [issue template](ISSUE_TEMPLATE.md).
+
+Everyone interacting in the Vue Component Generator codebase and issue tracking is expected to follow the [code of conduct](CODE_OF_CONDUCT.md).
+
 ## License
+
+Vue-gen is licensed under the [MIT license](LICENSE).
+
+Copyright © 2018 Bryan Kizer
 
 ```
 Vue-gen is licensed under the MIT license.
