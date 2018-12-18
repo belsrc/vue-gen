@@ -8,3 +8,8 @@
 ☑ Last Commit Badge [![Last Commit](https://img.shields.io/github/last-commit/belsrc/vue-gen/master.svg?style=flat-square)](https://github.com/belsrc/vue-gen/commits/master)
 ☐ Allow Props During Generation (name, type, default, required, validator [tie it to type?])
 ☐ Allow all Inquirer fields in the command line
+  - --file jsx|sfc
+  - --type standard|router
+  - --state true|false
+  - -q|--quiet (force default - jsx+standard+no state)
+☐ Implement Conventional Changelog
