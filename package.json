@@ -6,8 +6,16 @@
   "bin": {
     "vuegen": "vue-gen.js"
   },
+  "gitHooks": {
+    "commit-msg": "commitlint -E GIT_PARAMS",
+    "pre-commit": "npm run pre-commit-hook"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint -c .eslintrc.json --fix --color --ignore-path .eslintignore \"src/**/*.js\"",
+    "prettier": "prettier --config .prettierrc --write \"src/**/*.js\"",
+    "clean": "npm-run-all prettier lint",
+    "pre-commit-hook": "npm-run-all clean"
   },
   "keywords": [
     "vue component generator",
@@ -30,9 +38,13 @@
   "author": "bryan@bryanckizer.com",
   "license": "MIT",
   "devDependencies": {
+    "@commitlint/cli": "7.2.1",
+    "@commitlint/config-conventional": "7.1.2",
     "eslint": "5.9.0",
     "npm-check": "5.9.0",
-    "prettier": "1.15.2"
+    "npm-run-all": "4.1.5",
+    "prettier": "1.15.2",
+    "yorkie": "2.0.0"
   },
   "dependencies": {
     "commander": "2.19.0",
