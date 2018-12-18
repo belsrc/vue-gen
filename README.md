@@ -1,4 +1,8 @@
-# Vue Component Generator [![Maintainability](https://api.codeclimate.com/v1/badges/417464a612c51247901d/maintainability)](https://codeclimate.com/github/belsrc/vue-gen/maintainability) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/belsrc/vue-gen/pulls)
+# Vue Component Generator
+
+[![Maintainability](https://img.shields.io/codeclimate/maintainability/belsrc/vue-gen.svg?style=flat-square)](https://codeclimate.com/github/belsrc/vue-gen/maintainability)
+[![Last Commit](https://img.shields.io/github/last-commit/belsrc/vue-gen/master.svg?style=flat-square)](https://github.com/belsrc/vue-gen/commits/master)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/belsrc/vue-gen/pulls)
 
 Generate new Vue components from the command line.
 

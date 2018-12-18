@@ -1,0 +1,10 @@
+☑ More Docs (Contrib, Conduct, Issue Template)
+☐ Unit Tests
+  - Tie into Git hooks
+☐ TravisCI Setup
+  - TravisCI Badge
+☐ CodeCov Setup
+  - CodeCov Badge
+☑ Last Commit Badge [![Last Commit](https://img.shields.io/github/last-commit/belsrc/vue-gen/master.svg?style=flat-square)](https://github.com/belsrc/vue-gen/commits/master)
+☐ Allow Props During Generation (name, type, default, required, validator [tie it to type?])
+☐ Allow all Inquirer fields in the command line
