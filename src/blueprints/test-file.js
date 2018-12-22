@@ -7,30 +7,48 @@ import ${ componentName } from './${ compFile }';
 // But your free to use whatever test setup you prefer
 
 describe('${ componentName }', () => {
-  let wrapper;
-
   beforeEach(() => {
     jest.resetModules();
     jest.clearAllMocks();
-    wrapper = shallowMount(${ componentName });
+    // This is the equavalant of
+    // "jest": {
+    //   "clearMocks": true,
+    //   "resetModules": true
+    // }
+    // in the Jest config
+  });
+
+  describe('Props', () => {
+    // test('expect <prop-name> property config to be correct', () => {
+    //   const wrapper = shallowMount(${ componentName });
+    //   const <prop-name> = wrapper.vm.$options.props.<prop-name>;
+    //   expect(<prop-name>.required).toBeTruthy();
+    //   expect(<prop-name>.type).toEqual(String);
+    //   expect(<prop-name>.default).toEqual('');
+    //   expect(<prop-name>.validator && <prop-name>.validator('aa')).toBeTruthy()
+    // });
+    test.skip('NOT IMPLEMENTED', () => {});
   });
 
   describe('Data', () => {
     // test('has correct <data-name> data property', () => {
+    //   const wrapper = shallowMount(${ componentName });
     //   expect(wrapper.vm.<data-name>).toEqual(<value>);
     // });
     test.skip('NOT IMPLEMENTED', () => {});
   });
 
-  describe.skip('Computed', () => {
+  describe('Computed', () => {
     // test('has correct <computed-name> computed property', () => {
+    //   const wrapper = shallowMount(${ componentName });
     //   expect(wrapper.vm.<computed-name>).toEqual(<value>);
     // });
     test.skip('NOT IMPLEMENTED', () => {});
   });
 
-  describe.skip('Rendering', () => {
+  describe('Rendering', () => {
     // test('has the expected html structure', () => {
+    //   const wrapper = shallowMount(${ componentName });
     //   expect(wrapper.element).toMatchSnapshot();
     // });
     test.skip('NOT IMPLEMENTED', () => {});
