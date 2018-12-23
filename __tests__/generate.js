@@ -1,3 +1,4 @@
+jest.mock('path');
 jest.mock('./../src/write-gen-files');
 
 const generate = require('./../src/generate');
