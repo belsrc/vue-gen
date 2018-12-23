@@ -14,6 +14,7 @@
     "test": "jest --verbose",
     "test:changed": "jest -o",
     "test:cov": "nyc --reporter=text-summary jest --verbose --coverage",
+    "coverage": "nyc --reporter=lcov jest --verbose --coverage && nyc report && codecov -t 12ffff01-901f-4bec-8cf2-e3c7f4b5d313",
     "lint": "eslint -c .eslintrc.json --fix --color --ignore-path .eslintignore \"src/**/*.js\"",
     "prettier": "prettier --config .prettierrc --write \"src/**/*.js\"",
     "clean": "npm-run-all prettier lint",
@@ -48,6 +49,7 @@
   "devDependencies": {
     "@commitlint/cli": "7.2.1",
     "@commitlint/config-conventional": "7.1.2",
+    "codecov": "3.1.0",
     "eslint": "5.9.0",
     "jest": "23.6.0",
     "npm-check": "5.9.0",
