@@ -1,5 +1,6 @@
 # Vue Component Generator
 
+[![Build Status](https://img.shields.io/travis/com/belsrc/vue-gen.svg?style=flat-square)](https://travis-ci.com/belsrc/vue-gen)
 [![Maintainability](https://img.shields.io/codeclimate/maintainability/belsrc/vue-gen.svg?style=flat-square)](https://codeclimate.com/github/belsrc/vue-gen/maintainability)
 [![Code Coverage](https://img.shields.io/codecov/c/github/belsrc/vue-gen/master.svg?style=flat-square)](https://codecov.io/gh/belsrc/vue-gen/branch/master)
 [![Known Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/belsrc/vue-gen.svg?style=flat-square)](https://app.snyk.io/org/belsrc/project/0623bc36-ba88-4751-b85c-6f93c28b5f7c)
