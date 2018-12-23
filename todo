@@ -4,7 +4,7 @@
 ☑ Unit Tests
 ☑ TravisCI Setup
 ☑ CodeCov Setup
-☑ Last Commit Badge [![Last Commit](https://img.shields.io/github/last-commit/belsrc/vue-gen/master.svg?style=flat-square)](https://github.com/belsrc/vue-gen/commits/master)
+☑ Last Commit Badge
 ☐ Allow Props During Generation (name, type, default, required, validator [tie it to type?])
 ☐ Allow all Inquirer fields in the command line
   - --file jsx|sfc
