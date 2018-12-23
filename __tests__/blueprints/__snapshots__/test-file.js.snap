@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`genTest has the expected ouput structure 1`] = `
+"// Mobile / Baseline
+.TestComponent {}
+
+// Tablets
+@media only screen and (min-width: 768px) {}
+
+// Hi-Res Tablets
+@media only screen and (min-width: 1024px) {}
+
+// Desktops
+@media only screen and (min-width: 1200px) {}
+
+// Larger Desktops
+@media only screen and (min-width: 1920px) {}
+"
+`;
