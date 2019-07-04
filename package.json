@@ -22,7 +22,9 @@
     "standard": "standard-version --no-verify",
     "push-tags": "git push --follow-tags origin master",
     "pub": "npm publish",
-    "release": "npm-run-all clean test standard push-tags pub"
+    "release": "npm-run-all clean test standard push-tags pub",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "jest": {
     "clearMocks": true,
@@ -66,6 +68,8 @@
   "dependencies": {
     "commander": "2.19.0",
     "fjp": "0.2.4",
-    "inquirer": "6.2.0"
-  }
+    "inquirer": "6.2.0",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
