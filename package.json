@@ -8,17 +8,19 @@
   },
   "gitHooks": {
     "commit-msg": "commitlint -E GIT_PARAMS",
-    "pre-commit": "npm run pre-commit-hook"
+    "pre-commit": "npm run precommithook"
   },
   "scripts": {
-    "test": "jest --verbose",
-    "test:changed": "jest -o",
-    "test:cov": "nyc --reporter=text-summary jest --verbose --coverage",
-    "coverage": "nyc --reporter=lcov jest --verbose --coverage && nyc report && codecov -t 12ffff01-901f-4bec-8cf2-e3c7f4b5d313",
-    "lint": "eslint -c .eslintrc.json --fix --color --ignore-path .eslintignore \"src/**/*.js\"",
-    "prettier": "prettier --config .prettierrc --write \"src/**/*.js\"",
+    "precommithook": "npm-run-all clean test:changed-silent",
+    "check": "npx npm-check -u",
+    "lint": "npx eslint -c .eslintrc.js --fix --color --ignore-path .eslintignore \"src/**/*.js\"",
+    "prettier": "prettier --config .prettierrc.js --write \"src/**/*.js\"",
     "clean": "npm-run-all prettier lint",
-    "pre-commit-hook": "npm-run-all clean test:changed",
+    "test": "jest --verbose --passWithNoTests",
+    "test:changed": "jest -o --passWithNoTests",
+    "test:changed-silent": "jest -o --silent --passWithNoTests",
+    "test:cov": "nyc --reporter=text-summary jest --verbose --coverage --passWithNoTests",
+    "coverage": "nyc --reporter=lcov jest --verbose --coverage --passWithNoTests && codecov -t 12ffff01-901f-4bec-8cf2-e3c7f4b5d313",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "standard": "standard-version --no-verify",
     "push-tags": "git push --follow-tags origin master",
@@ -52,22 +54,22 @@
   "author": "bryan@bryanckizer.com",
   "license": "MIT",
   "devDependencies": {
-    "@commitlint/cli": "7.2.1",
-    "@commitlint/config-conventional": "7.1.2",
-    "codecov": "3.1.0",
-    "conventional-changelog-cli": "2.0.11",
-    "eslint": "5.9.0",
-    "jest": "23.6.0",
+    "@commitlint/cli": "8.2.0",
+    "@commitlint/config-conventional": "8.2.0",
+    "codecov": "3.6.1",
+    "conventional-changelog-cli": "2.0.23",
+    "eslint": "6.4.0",
+    "eslint-config-belsrc": "1.1.0",
+    "jest": "24.9.0",
     "npm-check": "5.9.0",
     "npm-run-all": "4.1.5",
-    "nyc": "13.1.0",
-    "prettier": "1.15.2",
-    "standard-version": "4.4.0",
+    "prettier": "1.18.2",
+    "standard-version": "7.0.0",
     "yorkie": "2.0.0"
   },
   "dependencies": {
-    "commander": "2.19.0",
+    "commander": "3.0.2",
     "fjp": "0.2.4",
-    "inquirer": "6.2.0"
+    "inquirer": "7.0.0"
   }
 }
