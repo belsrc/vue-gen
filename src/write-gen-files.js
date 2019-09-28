@@ -2,15 +2,16 @@ const fjp = require('fjp');
 const makeDir = require('./utils/make-dir');
 const writeFile = require('./utils/write-file');
 
-const writeGenFiles = fjp.curry(async (destination, files) => {
-  try {
-    await makeDir(destination);
+const fileList = filesObj => Object.entries(filesObj).map(([ dest, cont ]) => writeFile(dest, cont));
 
-    return Promise.all(Object.entries(files).map(([ dest, cont ]) => writeFile(dest, cont)));
-  }
-  catch(error) {
-    console.error('Error generating files');
-  }
+const writeGenFiles = fjp.curry(async (destination, files) => {
+  /* eslint-disable-next-line fp-jxl/no-unused-expression */
+  await makeDir(destination);
+
+  return fjp.compose(
+    x => Promise.all(x),
+    fileList
+  )(files);
 });
 
 module.exports = writeGenFiles;

@@ -6,10 +6,12 @@
 ☑ CodeCov Setup
 ☑ Last Commit Badge
 ☐ Allow Props During Generation (name, type, default, required, validator [tie it to type?])
-☐ Allow all Inquirer fields in the command line
+☑ Allow all Inquirer fields in the command line
   - --file jsx|sfc
   - --type standard|router
   - --state true|false
   - -q|--quiet (force default - jsx+standard+no state)
   - optional test file generation
-☐ Implement Conventional Changelog
+☑ Implement Conventional Changelog
+☐ Make test file generation optional?
+☐ Standard/Funcitonal component option

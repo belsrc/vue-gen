@@ -5,21 +5,56 @@ const fjp = require('fjp');
 const packageFile = require('./package.json');
 const getQuestions = require('./src/questions');
 const generate = require('./src/generate');
+const quietParam = require('./src/utils/quiet-params');
 
-program
-  .version(packageFile.version)
-  .usage('[component] [destination]')
-  .parse(process.argv);
+const assocInput = (quiet, val, prop) =>
+  val ? fjp.altAssoc(prop, val) : quiet ? fjp.altAssoc(prop, quietParam(prop)) : fjp.identity;
 
-const [ name, dest ] = program.args;
+const main = async () => {
+  const cmdInput = program
+    .version(packageFile.version)
+    .usage('[component] [destination] [options]')
+    .option('--file [file type]', 'type of file [jsx | sfc]')
+    .option('--component [component type]', 'type of component [standard | router]')
+    .option('-s, --state', 'adds state to component')
+    .option('-q, --quiet', 'create component using defaults for any missing arguments [jsx | standard | no state]')
+    .parse(process.argv);
 
-inquirer.prompt(getQuestions(!!name)).then(answers => {
-  const destination = dest ? dest : process.cwd();
-  const addName = name ? fjp.altAssoc('name', name) : fjp.identity;
-  const adArgs = fjp.compose(
-    addName,
-    fjp.altAssoc('destination', destination)
+  const [ name, dest ] = cmdInput.args;
+  const { file, component, state, quiet } = cmdInput;
+
+  if(quiet && !name) {
+    return console.error('Error: name must be provided when using the --quiet option. See vuegen --help for information');
+  }
+
+  const quietInputs = fjp.compose(
+    assocInput(quiet, file, 'file'),
+    assocInput(quiet, component, 'component'),
+    assocInput(quiet, state, 'state'),
+    fjp.altAssoc('destination', dest ? dest : process.cwd())
   );
 
-  generate(adArgs(answers));
-});
+  // Need to make so that if all other command flags are present, default state to false
+  // Not giving state makes it output sfc even when jsx is specified
+
+  const questions = getQuestions({ name, file, component, state });
+  const answers = quiet ?
+    quietInputs({}) :
+    questions.length ?
+      await inquirer.prompt(questions) :
+      { file, component, state };
+  const destination = dest ? dest : process.cwd();
+  const addName = assocInput(false, name, 'name');
+  const addDest = fjp.altAssoc('destination', destination);
+  const genFromArgs = fjp.compose(generate, addName, addDest);
+
+  return genFromArgs(answers);
+};
+
+/* eslint-disable fp/no-unused-expression */
+try {
+  main();
+}
+catch(error) {
+  console.log(error.message);
+}

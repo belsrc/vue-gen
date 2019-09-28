@@ -1,15 +1,12 @@
+/* eslint-disable promise/prefer-await-to-then */
 const fs = require('fs');
 
-const writeFile = async (filePath, content) =>
-  Promise.resolve()
-    .then(() =>
-      fs.writeFile(filePath, content, 'utf8', error => {
-        if(error) {
-          throw error;
-        }
+const promWriteFile = (filePath, content) =>
+  new Promise((resolve, reject) =>
+    fs.writeFile(filePath, content, { encoding: 'utf8', flag: 'w' }, error =>
+      error ? reject(error) : resolve()));
 
-        return Promise.resolve();
-      }))
-    .catch(() => console.error(`Error writing file: ${ filePath }`));
+const writeFile = async (filePath, content) =>
+  Promise.resolve().then(() => promWriteFile(filePath, content));
 
 module.exports = writeFile;

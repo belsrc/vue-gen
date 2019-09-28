@@ -1,3 +1,4 @@
+/* eslint-disable fp/no-unused-expression, fp/no-nil */
 jest.mock('./../src/blueprints/jsx-file');
 jest.mock('./../src/blueprints/vue-file');
 

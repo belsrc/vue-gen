@@ -1,6 +1,126 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`generate returns expected generated output 1`] = `
+exports[`generate returns expected generated output for router vue 1`] = `
+Object {
+  ".//test-component/index.vue": "<template>
+  <div class=\\"test-component\\">
+    (ಠ益ಠ)
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'TestComponent',
+
+  components: {},
+
+  props: {},
+
+  data() {
+    return {};
+  },
+
+  computed: {},
+
+  watch: {},
+
+  async created() {
+    await this.loadPageData();
+  },
+
+  mounted() {},
+
+  // When route changes and this component is already rendered, this guard is used
+  async beforeRouteUpdate(to, from, next) {
+    await this.loadPageData();
+
+    return next();
+  },
+
+  methods: {
+    async loadPageData() {},
+  },
+};
+</script>
+
+<style lang=\\"scss\\">
+  // Mobile / Baseline
+  .test-component {}
+
+  // Tablets
+  @media only screen and (min-width: 768px) {}
+
+  // Hi-Res Tablets
+  @media only screen and (min-width: 1024px) {}
+
+  // Desktops
+  @media only screen and (min-width: 1200px) {}
+
+  // Larger Desktops
+  @media only screen and (min-width: 1920px) {}
+</style>
+",
+  ".//test-component/test-component.test.js": "import 'babel-core/register';
+import { shallowMount } from '@vue/test-utils';
+import TestComponent from './index.vue';
+
+// Template uses Jest and Vue test utils as an example
+// npm i -D jest @vue/test-utils
+// But your free to use whatever test setup you prefer
+
+describe('TestComponent', () => {
+  beforeEach(() => {
+    jest.resetModules();
+    jest.clearAllMocks();
+    // This is the equavalant of
+    // \\"jest\\": {
+    //   \\"clearMocks\\": true,
+    //   \\"resetModules\\": true
+    // }
+    // in the Jest config
+  });
+
+  describe('Props', () => {
+    // test('expect <prop-name> property config to be correct', () => {
+    //   const wrapper = shallowMount(TestComponent);
+    //   const <prop-name> = wrapper.vm.$options.props.<prop-name>;
+    //   expect(<prop-name>.required).toBeTruthy();
+    //   expect(<prop-name>.type).toEqual(String);
+    //   expect(<prop-name>.default).toEqual('');
+    //   expect(<prop-name>.validator && <prop-name>.validator('aa')).toBeTruthy()
+    // });
+    test.skip('NOT IMPLEMENTED', () => {});
+  });
+
+  describe('Data', () => {
+    // test('has correct <data-name> data property', () => {
+    //   const wrapper = shallowMount(TestComponent);
+    //   expect(wrapper.vm.<data-name>).toEqual(<value>);
+    // });
+    test.skip('NOT IMPLEMENTED', () => {});
+  });
+
+  describe('Computed', () => {
+    // test('has correct <computed-name> computed property', () => {
+    //   const wrapper = shallowMount(TestComponent);
+    //   expect(wrapper.vm.<computed-name>).toEqual(<value>);
+    // });
+    test.skip('NOT IMPLEMENTED', () => {});
+  });
+
+  describe('Rendering', () => {
+    // test('has the expected html structure', () => {
+    //   const wrapper = shallowMount(TestComponent);
+    //   expect(wrapper.element).toMatchSnapshot();
+    // });
+    test.skip('NOT IMPLEMENTED', () => {});
+  });
+});
+",
+}
+`;
+
+exports[`generate returns expected generated output for standard jsx 1`] = `
 Object {
   ".//test-component/index.jsx": "import './styles.scss';
 
