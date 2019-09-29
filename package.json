@@ -22,7 +22,7 @@
     "test:cov": "jest --verbose --coverage --passWithNoTests",
     "coverage": "jest --verbose --coverage --passWithNoTests && codecov -t 12ffff01-901f-4bec-8cf2-e3c7f4b5d313",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
-    "standard": "standard-version --no-verify --release-as major",
+    "standard": "standard-version --no-verify",
     "push-tags": "git push --follow-tags origin master",
     "pub": "npm publish",
     "release": "npm-run-all clean test standard push-tags pub"
