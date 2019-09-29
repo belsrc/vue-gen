@@ -1,13 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`genVue has the expected ouput structure as page and with state 1`] = `
-"<template>
-  <div class=\\"test-component\\">
-    (ಠ益ಠ)
-  </div>
-</template>
-
-<script>
+"<script>
 import { mapState, mapGetters, mapActions } from 'vuex';
 
 export default {
@@ -50,6 +44,12 @@ export default {
 };
 </script>
 
+<template>
+  <div class=\\"test-component\\">
+    (ಠ益ಠ)
+  </div>
+</template>
+
 <style lang=\\"scss\\">
   // Mobile / Baseline
   .test-component {}
@@ -70,13 +70,7 @@ export default {
 `;
 
 exports[`genVue has the expected ouput structure as page without state 1`] = `
-"<template>
-  <div class=\\"test-component\\">
-    (ಠ益ಠ)
-  </div>
-</template>
-
-<script>
+"<script>
 export default {
   name: 'TestComponent',
 
@@ -111,6 +105,12 @@ export default {
 };
 </script>
 
+<template>
+  <div class=\\"test-component\\">
+    (ಠ益ಠ)
+  </div>
+</template>
+
 <style lang=\\"scss\\">
   // Mobile / Baseline
   .test-component {}
@@ -131,13 +131,7 @@ export default {
 `;
 
 exports[`genVue has the expected ouput structure not as page and without state 1`] = `
-"<template>
-  <div class=\\"test-component\\">
-    (ಠ益ಠ)
-  </div>
-</template>
-
-<script>
+"<script>
 export default {
   name: 'TestComponent',
 
@@ -161,6 +155,12 @@ export default {
 };
 </script>
 
+<template>
+  <div class=\\"test-component\\">
+    (ಠ益ಠ)
+  </div>
+</template>
+
 <style lang=\\"scss\\">
   // Mobile / Baseline
   .test-component {}
@@ -181,13 +181,7 @@ export default {
 `;
 
 exports[`genVue has the expected ouput structure not as page with state 1`] = `
-"<template>
-  <div class=\\"test-component\\">
-    (ಠ益ಠ)
-  </div>
-</template>
-
-<script>
+"<script>
 import { mapState, mapGetters, mapActions } from 'vuex';
 
 export default {
@@ -218,6 +212,12 @@ export default {
   },
 };
 </script>
+
+<template>
+  <div class=\\"test-component\\">
+    (ಠ益ಠ)
+  </div>
+</template>
 
 <style lang=\\"scss\\">
   // Mobile / Baseline

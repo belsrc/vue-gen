@@ -1,4 +1,4 @@
-const genTest = (componentName, compFile) => `import 'babel-core/register';
+const genTest = (componentName, compFile) => `import '@babel/register';
 import { shallowMount } from '@vue/test-utils';
 import ${ componentName } from './${ compFile }';
 
@@ -10,46 +10,37 @@ describe('${ componentName }', () => {
   beforeEach(() => {
     jest.resetModules();
     jest.clearAllMocks();
-    // This is the equavalant of
-    // "jest": {
-    //   "clearMocks": true,
-    //   "resetModules": true
-    // }
-    // in the Jest config
-  });
-
-  describe('Props', () => {
-    // test('expect <prop-name> property config to be correct', () => {
-    //   const wrapper = shallowMount(${ componentName });
-    //   const <prop-name> = wrapper.vm.$options.props.<prop-name>;
-    //   expect(<prop-name>.required).toBeTruthy();
-    //   expect(<prop-name>.type).toEqual(String);
-    //   expect(<prop-name>.default).toEqual('');
-    //   expect(<prop-name>.validator && <prop-name>.validator('aa')).toBeTruthy()
-    // });
-    test.skip('NOT IMPLEMENTED', () => {});
-  });
-
-  describe('Data', () => {
-    // test('has correct <data-name> data property', () => {
-    //   const wrapper = shallowMount(${ componentName });
-    //   expect(wrapper.vm.<data-name>).toEqual(<value>);
-    // });
-    test.skip('NOT IMPLEMENTED', () => {});
   });
 
   describe('Computed', () => {
-    // test('has correct <computed-name> computed property', () => {
+    // test('should have correct <computed-name> computed value', () => {
     //   const wrapper = shallowMount(${ componentName });
-    //   expect(wrapper.vm.<computed-name>).toEqual(<value>);
+    //
+    //   const actual = wrapper.vm.<computed-name>;
+    //
+    //   expect(actual).toEqual(<value>);
+    // });
+    test.skip('NOT IMPLEMENTED', () => {});
+  });
+
+  describe('Methods', () => {
+    // test('<method-name> should return correct value', () => {
+    //   const wrapper = shallowMount(${ componentName });
+    //
+    //   const actual = wrapper.vm.<method-name>();
+    //
+    //   expect(actual).toEqual(<value>);
     // });
     test.skip('NOT IMPLEMENTED', () => {});
   });
 
   describe('Rendering', () => {
-    // test('has the expected html structure', () => {
+    // test('should not show some selector', () => {
     //   const wrapper = shallowMount(${ componentName });
-    //   expect(wrapper.element).toMatchSnapshot();
+    //
+    //   const actual = wrapper.find('.class-selector).exists();
+    //
+    //   expect(actual).not.toBeTruthy();
     // });
     test.skip('NOT IMPLEMENTED', () => {});
   });

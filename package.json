@@ -19,8 +19,8 @@
     "test": "jest --verbose --passWithNoTests",
     "test:changed": "jest -o --passWithNoTests",
     "test:changed-silent": "jest -o --silent --passWithNoTests",
-    "test:cov": "nyc --reporter=text-summary jest --verbose --coverage --passWithNoTests",
-    "coverage": "nyc --reporter=lcov jest --verbose --coverage --passWithNoTests && codecov -t 12ffff01-901f-4bec-8cf2-e3c7f4b5d313",
+    "test:cov": "jest --verbose --coverage --passWithNoTests",
+    "coverage": "jest --verbose --coverage --passWithNoTests && codecov -t 12ffff01-901f-4bec-8cf2-e3c7f4b5d313",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "standard": "standard-version --no-verify",
     "push-tags": "git push --follow-tags origin master",
@@ -31,7 +31,10 @@
     "clearMocks": true,
     "resetModules": true,
     "coverageDirectory": "coverage",
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ]
   },
   "keywords": [
     "vue component generator",

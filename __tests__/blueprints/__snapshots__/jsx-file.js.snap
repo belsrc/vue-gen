@@ -41,10 +41,9 @@ export default {
     async loadPageData() {},
   },
 
-  // eslint-disable-next-line no-unused-vars
-  render(h) {
+  render() {
     return (
-      <div class=\\"test-component\\">
+      <div class='test-component'>
         (ಠ益ಠ)
       </div>
     );
@@ -86,10 +85,9 @@ export default {
     async loadPageData() {},
   },
 
-  // eslint-disable-next-line no-unused-vars
-  render(h) {
+  render() {
     return (
-      <div class=\\"test-component\\">
+      <div class='test-component'>
         (ಠ益ಠ)
       </div>
     );
@@ -120,10 +118,9 @@ export default {
 
   methods: {},
 
-  // eslint-disable-next-line no-unused-vars
-  render(h) {
+  render() {
     return (
-      <div class=\\"test-component\\">
+      <div class='test-component'>
         (ಠ益ಠ)
       </div>
     );
@@ -162,10 +159,9 @@ export default {
     ...mapActions({}),
   },
 
-  // eslint-disable-next-line no-unused-vars
-  render(h) {
+  render() {
     return (
-      <div class=\\"test-component\\">
+      <div class='test-component'>
         (ಠ益ಠ)
       </div>
     );

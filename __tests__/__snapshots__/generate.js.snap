@@ -2,13 +2,7 @@
 
 exports[`generate returns expected generated output for router vue 1`] = `
 Object {
-  ".//test-component/index.vue": "<template>
-  <div class=\\"test-component\\">
-    (ಠ益ಠ)
-  </div>
-</template>
-
-<script>
+  ".//test-component/index.vue": "<script>
 export default {
   name: 'TestComponent',
 
@@ -43,6 +37,12 @@ export default {
 };
 </script>
 
+<template>
+  <div class=\\"test-component\\">
+    (ಠ益ಠ)
+  </div>
+</template>
+
 <style lang=\\"scss\\">
   // Mobile / Baseline
   .test-component {}
@@ -60,7 +60,7 @@ export default {
   @media only screen and (min-width: 1920px) {}
 </style>
 ",
-  ".//test-component/test-component.test.js": "import 'babel-core/register';
+  ".//test-component/test-component.test.js": "import '@babel/register';
 import { shallowMount } from '@vue/test-utils';
 import TestComponent from './index.vue';
 
@@ -72,46 +72,37 @@ describe('TestComponent', () => {
   beforeEach(() => {
     jest.resetModules();
     jest.clearAllMocks();
-    // This is the equavalant of
-    // \\"jest\\": {
-    //   \\"clearMocks\\": true,
-    //   \\"resetModules\\": true
-    // }
-    // in the Jest config
-  });
-
-  describe('Props', () => {
-    // test('expect <prop-name> property config to be correct', () => {
-    //   const wrapper = shallowMount(TestComponent);
-    //   const <prop-name> = wrapper.vm.$options.props.<prop-name>;
-    //   expect(<prop-name>.required).toBeTruthy();
-    //   expect(<prop-name>.type).toEqual(String);
-    //   expect(<prop-name>.default).toEqual('');
-    //   expect(<prop-name>.validator && <prop-name>.validator('aa')).toBeTruthy()
-    // });
-    test.skip('NOT IMPLEMENTED', () => {});
-  });
-
-  describe('Data', () => {
-    // test('has correct <data-name> data property', () => {
-    //   const wrapper = shallowMount(TestComponent);
-    //   expect(wrapper.vm.<data-name>).toEqual(<value>);
-    // });
-    test.skip('NOT IMPLEMENTED', () => {});
   });
 
   describe('Computed', () => {
-    // test('has correct <computed-name> computed property', () => {
+    // test('should have correct <computed-name> computed value', () => {
     //   const wrapper = shallowMount(TestComponent);
-    //   expect(wrapper.vm.<computed-name>).toEqual(<value>);
+    //
+    //   const actual = wrapper.vm.<computed-name>;
+    //
+    //   expect(actual).toEqual(<value>);
+    // });
+    test.skip('NOT IMPLEMENTED', () => {});
+  });
+
+  describe('Methods', () => {
+    // test('<method-name> should return correct value', () => {
+    //   const wrapper = shallowMount(TestComponent);
+    //
+    //   const actual = wrapper.vm.<method-name>();
+    //
+    //   expect(actual).toEqual(<value>);
     // });
     test.skip('NOT IMPLEMENTED', () => {});
   });
 
   describe('Rendering', () => {
-    // test('has the expected html structure', () => {
+    // test('should not show some selector', () => {
     //   const wrapper = shallowMount(TestComponent);
-    //   expect(wrapper.element).toMatchSnapshot();
+    //
+    //   const actual = wrapper.find('.class-selector).exists();
+    //
+    //   expect(actual).not.toBeTruthy();
     // });
     test.skip('NOT IMPLEMENTED', () => {});
   });
@@ -151,10 +142,9 @@ export default {
     ...mapActions({}),
   },
 
-  // eslint-disable-next-line no-unused-vars
-  render(h) {
+  render() {
     return (
-      <div class=\\"test-component\\">
+      <div class='test-component'>
         (ಠ益ಠ)
       </div>
     );
@@ -176,7 +166,7 @@ export default {
 // Larger Desktops
 @media only screen and (min-width: 1920px) {}
 ",
-  ".//test-component/test-component.test.js": "import 'babel-core/register';
+  ".//test-component/test-component.test.js": "import '@babel/register';
 import { shallowMount } from '@vue/test-utils';
 import TestComponent from './index.jsx';
 
@@ -188,46 +178,37 @@ describe('TestComponent', () => {
   beforeEach(() => {
     jest.resetModules();
     jest.clearAllMocks();
-    // This is the equavalant of
-    // \\"jest\\": {
-    //   \\"clearMocks\\": true,
-    //   \\"resetModules\\": true
-    // }
-    // in the Jest config
-  });
-
-  describe('Props', () => {
-    // test('expect <prop-name> property config to be correct', () => {
-    //   const wrapper = shallowMount(TestComponent);
-    //   const <prop-name> = wrapper.vm.$options.props.<prop-name>;
-    //   expect(<prop-name>.required).toBeTruthy();
-    //   expect(<prop-name>.type).toEqual(String);
-    //   expect(<prop-name>.default).toEqual('');
-    //   expect(<prop-name>.validator && <prop-name>.validator('aa')).toBeTruthy()
-    // });
-    test.skip('NOT IMPLEMENTED', () => {});
-  });
-
-  describe('Data', () => {
-    // test('has correct <data-name> data property', () => {
-    //   const wrapper = shallowMount(TestComponent);
-    //   expect(wrapper.vm.<data-name>).toEqual(<value>);
-    // });
-    test.skip('NOT IMPLEMENTED', () => {});
   });
 
   describe('Computed', () => {
-    // test('has correct <computed-name> computed property', () => {
+    // test('should have correct <computed-name> computed value', () => {
     //   const wrapper = shallowMount(TestComponent);
-    //   expect(wrapper.vm.<computed-name>).toEqual(<value>);
+    //
+    //   const actual = wrapper.vm.<computed-name>;
+    //
+    //   expect(actual).toEqual(<value>);
+    // });
+    test.skip('NOT IMPLEMENTED', () => {});
+  });
+
+  describe('Methods', () => {
+    // test('<method-name> should return correct value', () => {
+    //   const wrapper = shallowMount(TestComponent);
+    //
+    //   const actual = wrapper.vm.<method-name>();
+    //
+    //   expect(actual).toEqual(<value>);
     // });
     test.skip('NOT IMPLEMENTED', () => {});
   });
 
   describe('Rendering', () => {
-    // test('has the expected html structure', () => {
+    // test('should not show some selector', () => {
     //   const wrapper = shallowMount(TestComponent);
-    //   expect(wrapper.element).toMatchSnapshot();
+    //
+    //   const actual = wrapper.find('.class-selector).exists();
+    //
+    //   expect(actual).not.toBeTruthy();
     // });
     test.skip('NOT IMPLEMENTED', () => {});
   });

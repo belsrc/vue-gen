@@ -1,10 +1,4 @@
-const genVue = (compName, className, isPage, hasState) => `<template>
-  <div class="${ className }">
-    (ಠ益ಠ)
-  </div>
-</template>
-
-<script>${
+const genVue = (compName, className, isPage, hasState) => `<script>${
   hasState ?
     `
 import { mapState, mapGetters, mapActions } from 'vuex';
@@ -75,6 +69,12 @@ ${
 }
 };
 </script>
+
+<template>
+  <div class="${ className }">
+    (ಠ益ಠ)
+  </div>
+</template>
 
 <style lang="scss">
   // Mobile / Baseline

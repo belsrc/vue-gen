@@ -66,10 +66,9 @@ ${
       'methods: {},'
 }
 
-  // eslint-disable-next-line no-unused-vars
-  render(h) {
+  render() {
     return (
-      <div class="${ className }">
+      <div class='${ className }'>
         (ಠ益ಠ)
       </div>
     );
