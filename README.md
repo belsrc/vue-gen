@@ -38,7 +38,7 @@ What type of component?
 Does component have state? (y/N)
 ```
 
-Selecting yes for functional component will cause the last two questions so be skipped as they no longer apply.
+Selecting `yes` for functional component will cause the last two questions to be skipped, as they no longer apply.
 
 ### Generated Files
 
