@@ -1,3 +1,4 @@
+/* eslint-disable fp-jxl/no-unused-expression, fp-jxl/no-nil */
 const pascalCase = require('./../../src/utils/pascal-case');
 
 const expected = 'PascalTest';

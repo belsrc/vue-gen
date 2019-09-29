@@ -29,6 +29,7 @@ Component name? # not shown if name given in command
 What type of file?
   * JSX Component
   * Single File Component
+Is this a functional component? (y/N)
 What type of component?
   * Standard Component
   * Router Page

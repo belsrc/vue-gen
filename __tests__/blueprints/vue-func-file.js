@@ -1,11 +1,12 @@
 /* eslint-disable fp-jxl/no-unused-expression, fp-jxl/no-nil */
-const genScss = require('./../../src/blueprints/scss-file');
+const genFnVue = require('./../../src/blueprints/vue-func-file');
 
+const compName = 'TestComponent';
 const className = 'test-component';
 
-describe('genScss', () => {
+describe('genFnVue', () => {
   test('has the expected ouput structure', () => {
-    const actual = genScss(className);
+    const actual = genFnVue(compName, className);
 
     expect(actual).toMatchSnapshot();
   });

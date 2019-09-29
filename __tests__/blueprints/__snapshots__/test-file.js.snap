@@ -1,19 +1,81 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`genTest has the expected ouput structure 1`] = `
-"// Mobile / Baseline
-.TestComponent {}
+"import '@babel/register';
+import { shallowMount } from '@vue/test-utils';
+import TestComponent from './test-component';
 
-// Tablets
-@media only screen and (min-width: 768px) {}
+// Template uses Jest and Vue test utils as an example
+// npm i -D jest @vue/test-utils
+// But your free to use whatever test setup you prefer
 
-// Hi-Res Tablets
-@media only screen and (min-width: 1024px) {}
+describe('TestComponent', () => {
+  beforeEach(() => {
+    jest.resetModules();
+    jest.clearAllMocks();
+  });
 
-// Desktops
-@media only screen and (min-width: 1200px) {}
+  describe('Computed', () => {
+    // test('should have correct <computed-name> computed value', () => {
+    //   const wrapper = shallowMount(TestComponent);
+    //
+    //   const actual = wrapper.vm.<computed-name>;
+    //
+    //   expect(actual).toEqual(<value>);
+    // });
+    test.skip('NOT IMPLEMENTED', () => {});
+  });
 
-// Larger Desktops
-@media only screen and (min-width: 1920px) {}
+  describe('Methods', () => {
+    // test('<method-name> should return correct value', () => {
+    //   const wrapper = shallowMount(TestComponent);
+    //
+    //   const actual = wrapper.vm.<method-name>();
+    //
+    //   expect(actual).toEqual(<value>);
+    // });
+    test.skip('NOT IMPLEMENTED', () => {});
+  });
+
+  describe('Rendering', () => {
+    // test('should not show some selector', () => {
+    //   const wrapper = shallowMount(TestComponent);
+    //
+    //   const actual = wrapper.find('.class-selector).exists();
+    //
+    //   expect(actual).not.toBeTruthy();
+    // });
+    test.skip('NOT IMPLEMENTED', () => {});
+  });
+});
+"
+`;
+
+exports[`genTest has the expected ouput structure when functional 1`] = `
+"import '@babel/register';
+import { shallowMount } from '@vue/test-utils';
+import TestComponent from './test-component';
+
+// Template uses Jest and Vue test utils as an example
+// npm i -D jest @vue/test-utils
+// But your free to use whatever test setup you prefer
+
+describe('TestComponent', () => {
+  beforeEach(() => {
+    jest.resetModules();
+    jest.clearAllMocks();
+  });
+
+  describe('Rendering', () => {
+    // test('should not show some selector', () => {
+    //   const wrapper = shallowMount(TestComponent);
+    //
+    //   const actual = wrapper.find('.class-selector).exists();
+    //
+    //   expect(actual).not.toBeTruthy();
+    // });
+    test.skip('NOT IMPLEMENTED', () => {});
+  });
+});
 "
 `;

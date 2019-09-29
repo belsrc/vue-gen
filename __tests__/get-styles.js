@@ -1,4 +1,4 @@
-/* eslint-disable fp/no-unused-expression, fp/no-nil */
+/* eslint-disable fp-jxl/no-unused-expression, fp-jxl/no-nil */
 jest.mock('./../src/blueprints/scss-file');
 
 const getStyles = require('./../src/get-styles');

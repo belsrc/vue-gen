@@ -1,4 +1,4 @@
-const genTest = (componentName, compFile) => `import '@babel/register';
+const genTest = (componentName, compFile, isFunctional) => `import '@babel/register';
 import { shallowMount } from '@vue/test-utils';
 import ${ componentName } from './${ compFile }';
 
@@ -10,7 +10,9 @@ describe('${ componentName }', () => {
   beforeEach(() => {
     jest.resetModules();
     jest.clearAllMocks();
-  });
+  });${
+  !isFunctional ?
+    `
 
   describe('Computed', () => {
     // test('should have correct <computed-name> computed value', () => {
@@ -21,7 +23,11 @@ describe('${ componentName }', () => {
     //   expect(actual).toEqual(<value>);
     // });
     test.skip('NOT IMPLEMENTED', () => {});
-  });
+  });` :
+    ''
+}${
+  !isFunctional ?
+    `
 
   describe('Methods', () => {
     // test('<method-name> should return correct value', () => {
@@ -32,7 +38,9 @@ describe('${ componentName }', () => {
     //   expect(actual).toEqual(<value>);
     // });
     test.skip('NOT IMPLEMENTED', () => {});
-  });
+  });` :
+    ''
+}
 
   describe('Rendering', () => {
     // test('should not show some selector', () => {

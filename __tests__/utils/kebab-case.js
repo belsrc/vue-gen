@@ -1,3 +1,4 @@
+/* eslint-disable fp-jxl/no-unused-expression, fp-jxl/no-nil */
 const kebabCase = require('./../../src/utils/kebab-case');
 
 const expected = 'kebab-test';

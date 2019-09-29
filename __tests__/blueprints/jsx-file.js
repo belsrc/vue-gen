@@ -1,3 +1,4 @@
+/* eslint-disable fp-jxl/no-unused-expression, fp-jxl/no-nil */
 const genJsx = require('./../../src/blueprints/jsx-file');
 
 const compName = 'TestComponent';

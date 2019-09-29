@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`genFnVue has the expected ouput structure 1`] = `
+"<script>
+export default {
+  name: 'TestComponent',
+
+  components: {},
+
+  props: {},
+};
+</script>
+
+<template functional>
+  <div class=\\"test-component\\">
+    (ಠ益ಠ)
+  </div>
+</template>
+
+<style lang=\\"scss\\">
+  // Mobile / Baseline
+  .test-component {}
+
+  // Tablets
+  @media only screen and (min-width: 768px) {}
+
+  // Hi-Res Tablets
+  @media only screen and (min-width: 1024px) {}
+
+  // Desktops
+  @media only screen and (min-width: 1200px) {}
+
+  // Larger Desktops
+  @media only screen and (min-width: 1920px) {}
+</style>
+"
+`;

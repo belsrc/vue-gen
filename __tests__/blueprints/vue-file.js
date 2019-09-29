@@ -1,3 +1,4 @@
+/* eslint-disable fp-jxl/no-unused-expression, fp-jxl/no-nil */
 const genVue = require('./../../src/blueprints/vue-file');
 
 const compName = 'TestComponent';
