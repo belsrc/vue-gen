@@ -81,4 +81,4 @@ Everyone interacting in the Vue Component Generator codebase and issue tracking 
 
 Vue-gen is licensed under the [MIT license](LICENSE).
 
-Copyright © 2018 Bryan Kizer
+Copyright © 2019 Bryan Kizer

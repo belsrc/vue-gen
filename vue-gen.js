@@ -36,9 +36,6 @@ const main = async () => {
     fjp.altAssoc('destination', dest ? dest : process.cwd())
   );
 
-  // Need to make so that if all other command flags are present, default state to false
-  // Not giving state makes it output sfc even when jsx is specified
-
   const questions = getQuestions(supplied);
 
   const answers = quiet ?
@@ -49,13 +46,15 @@ const main = async () => {
 
   const destination = dest ? dest : process.cwd();
 
+  const merge = (first, second) => ({ ...first, ...second });
+
   const addName = assocInput(false, name, 'name');
 
   const addDest = fjp.altAssoc('destination', destination);
 
-  const genFromArgs = fjp.compose(generate, addName, addDest);
+  const genFromArgs = fjp.compose(generate, addName, addDest, merge);
 
-  return genFromArgs(answers);
+  return genFromArgs(supplied, answers);
 };
 
 try {
