@@ -2,7 +2,7 @@
 
 ## Logging Issues
 
-All issues should be created using the [new issue form](https://github.com/belsrc/vue-gen/issues/new). If possible, use the [issue template](ISSUE_TEMPLATE.md) to create the issue. Simply copy the content of the template into a new issue, delete the prerequisite section after reading, and fill in the appropriate information.
+All issues should be created using the [new issue form](https://github.com/belsrc/vue-gen/issues/new). If possible, use the [issue template](.github\ISSUE_TEMPLATE.md) to create the issue. Simply copy the content of the template into a new issue, delete the prerequisite section after reading, and fill in the appropriate information.
 
 Project uses:
 

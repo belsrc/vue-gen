@@ -15,15 +15,15 @@
 2. [Second Step]
 3. [and so on...]
 
-**Expected behavior:** [What you expect to happen]
+**Expected behavior**
+A clear and concise description of what you expected to happen.
 
-**Actual behavior:** [What actually happens]
-
-**Reproduces how often:** [What percentage of the time does it reproduce?]
+**Actual behavior:**
+A clear and concise description of what actually happened.
 
 ### Versions
 
-You can get this information from copy and pasting the output of `vuegen --version` from the command line.
+You can get this information from copy and pasting the output of `vuegen --version` from the command line. Also include OS version.
 
 ### Additional Information
 
