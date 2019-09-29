@@ -1,4 +1,4 @@
-name: Run Linting
+name: lint
 
 on: [pull_request, push]
 

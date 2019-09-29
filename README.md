@@ -1,12 +1,13 @@
 # Vue Component Generator
 
-[![Build Status](https://img.shields.io/travis/com/belsrc/vue-gen.svg?logo=travis&logoWidth=14&style=flat-square)](https://travis-ci.com/belsrc/vue-gen)
+[![Build Status](https://github.com/belsrc/vue-gen/workflows/build/badge.svg)](https://github.com/belsrc/vue-gen/actions)
 [![Maintainability](https://img.shields.io/codeclimate/maintainability/belsrc/vue-gen.svg?logo=code%20climate&logoWidth=14&style=flat-square)](https://codeclimate.com/github/belsrc/vue-gen/maintainability)
 [![Code Coverage](https://img.shields.io/codecov/c/github/belsrc/vue-gen/master.svg?logo=codecov&logoWidth=14&style=flat-square)](https://codecov.io/gh/belsrc/vue-gen/branch/master)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/belsrc/vue-gen.svg?logo=lgtm&logoWidth=14&style=flat-square)](https://lgtm.com/projects/g/belsrc/vue-gen/alerts/)
 [![Known Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/belsrc/vue-gen.svg?logo=snyk&logoWidth=14&style=flat-square)](https://app.snyk.io/org/belsrc/project/0623bc36-ba88-4751-b85c-6f93c28b5f7c)
 [![Last Commit](https://img.shields.io/github/last-commit/belsrc/vue-gen/master.svg?logo=github&logoWidth=14&style=flat-square)](https://github.com/belsrc/vue-gen/commits/master)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/belsrc/vue-gen/pulls)
+
 
 Generate new Vue components from the command line.
 
