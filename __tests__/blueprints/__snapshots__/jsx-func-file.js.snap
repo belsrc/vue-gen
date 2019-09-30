@@ -4,7 +4,7 @@ exports[`genFnJsx has the expected ouput structure 1`] = `
 "import './styles.scss';
 
 const TestComponent = ({ props, listeners, data }) =>
-  <div class={ \`test-component \${ data.class }\` }>
+  <div class={ \`test-component\${ data.class ? \` \${ data.class }\` : '' }\` }>
     (ಠ益ಠ)
   </div>
 
