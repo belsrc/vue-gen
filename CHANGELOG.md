@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/belsrc/vue-gen/compare/v1.0.0...v1.0.1) (2019-09-30)
+
+
+### Bug Fixes
+
+* fix functional component blueprint ([b913c19](https://github.com/belsrc/vue-gen/commit/b913c19))
+
 ## [1.0.0](https://github.com/belsrc/vue-gen/compare/v0.2.2...v1.0.0) (2019-09-29)
 
 ### [0.2.2](https://github.com/belsrc/vue-gen/compare/v0.2.1...v0.2.2) (2019-09-29)
