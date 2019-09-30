@@ -3,20 +3,15 @@
 exports[`genFnJsx has the expected ouput structure 1`] = `
 "import './styles.scss';
 
-export default {
-  name: 'TestComponent',
+const TestComponent = ({ props, listeners, data }) =>
+  <div class={ \`test-component \${ data.class }\` }>
+    (ಠ益ಠ)
+  </div>
 
-  functional: true,
+;
 
-  props: {},
+TestComponent.name = 'TestComponent';
 
-  render({ props, listeners, data }) {
-    return (
-      <div class={ \`test-component \${ data.class }\` }>
-        (ಠ益ಠ)
-      </div>
-    );
-  },
-};
+export default TestComponent;
 "
 `;

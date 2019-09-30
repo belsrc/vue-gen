@@ -1,20 +1,15 @@
 const genFnJsx = (compName, className) => `import './styles.scss';
 
-export default {
-  name: '${ compName }',
+const ${ compName } = ({ props, listeners, data }) =>
+  <div class={ \`${ className } \${ data.class }\` }>
+    (ಠ益ಠ)
+  </div>
 
-  functional: true,
+;
 
-  props: {},
+${ compName }.name = '${ compName }';
 
-  render({ props, listeners, data }) {
-    return (
-      <div class={ \`${ className } \${ data.class }\` }>
-        (ಠ益ಠ)
-      </div>
-    );
-  },
-};
+export default ${ compName };
 `;
 
 module.exports = genFnJsx;
