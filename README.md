@@ -1,6 +1,6 @@
 # Vue Component Generator
 
-[![Build Status](https://github.com/belsrc/vue-gen/workflows/build/badge.svg)](https://github.com/belsrc/vue-gen/actions)
+[![Build Status](https://github.com/belsrc/vue-gen/workflows/build-check/badge.svg)](https://github.com/belsrc/vue-gen/actions)
 [![Maintainability](https://img.shields.io/codeclimate/maintainability/belsrc/vue-gen.svg?logo=code%20climate&logoWidth=14&style=flat-square)](https://codeclimate.com/github/belsrc/vue-gen/maintainability)
 [![Code Coverage](https://img.shields.io/codecov/c/github/belsrc/vue-gen/master.svg?logo=codecov&logoWidth=14&style=flat-square)](https://codecov.io/gh/belsrc/vue-gen/branch/master)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/belsrc/vue-gen.svg?logo=lgtm&logoWidth=14&style=flat-square)](https://lgtm.com/projects/g/belsrc/vue-gen/alerts/)

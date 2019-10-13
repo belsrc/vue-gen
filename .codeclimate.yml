@@ -1,6 +1,17 @@
 plugins:
   fixme:
     enabled: true
+    config:
+      strings:
+      - DEBUG
+      - HACK
+      - TODO
+      - FIXME
+  duplication:
+    enabled: true
+    checks:
+      Similar code:
+        enabled: false
   nodesecurity:
     enabled: true
   eslint:
@@ -10,7 +21,9 @@ plugins:
       config: .eslintrc.js
       extensions:
         - .js
+        - .jsx
 exclude_patterns:
   - '**/node_modules/'
   - '**/__tests__/*'
   - '**/__mocks__/*'
+  - '**/*.test.js"'
