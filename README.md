@@ -2,7 +2,7 @@
 
 [![Build Status](https://github.com/belsrc/vue-gen/workflows/build-check/badge.svg)](https://github.com/belsrc/vue-gen/actions)
 [![Maintainability](https://img.shields.io/codeclimate/maintainability/belsrc/vue-gen.svg?logo=code%20climate&logoWidth=14&style=flat-square)](https://codeclimate.com/github/belsrc/vue-gen/maintainability)
-[![Code Coverage](https://img.shields.io/codecov/c/github/belsrc/vue-gen/master.svg?logo=codecov&logoWidth=14&style=flat-square)](https://codecov.io/gh/belsrc/vue-gen/branch/master)
+[![Code Coverage](https://img.shields.io/codeclimate/coverage/belsrc/vue-gen?logo=code%20climate&style=flat-square)](https://codeclimate.com/github/belsrc/vue-gen/test_coverage)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/belsrc/vue-gen.svg?logo=lgtm&logoWidth=14&style=flat-square)](https://lgtm.com/projects/g/belsrc/vue-gen/alerts/)
 [![Known Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/belsrc/vue-gen.svg?logo=snyk&logoWidth=14&style=flat-square)](https://app.snyk.io/org/belsrc/project/0623bc36-ba88-4751-b85c-6f93c28b5f7c)
 [![Last Commit](https://img.shields.io/github/last-commit/belsrc/vue-gen/master.svg?logo=github&logoWidth=14&style=flat-square)](https://github.com/belsrc/vue-gen/commits/master)
