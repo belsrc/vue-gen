@@ -18,12 +18,21 @@ const main = async () => {
     .option('--component [component type]', 'type of component [standard | router]')
     .option('-f, --functional', 'create a functional component')
     .option('-s, --state', 'adds state to component')
-    .option('-q, --quiet', 'create component using defaults for any missing arguments [jsx | standard | no state]')
+    .option(
+      '-q, --quiet',
+      'create component using defaults for any missing arguments [jsx | standard | no state]'
+    )
     .parse(process.argv);
 
   const [ name, dest ] = cmdInput.args;
   const { file, component, state, quiet, functional } = cmdInput;
-  const supplied = { name, file, component, state, functional };
+  const supplied = {
+    name,
+    file,
+    component,
+    state,
+    functional,
+  };
 
   if(quiet && !name) {
     return console.error('Error: name must be provided when using the --quiet option. See vuegen --help for information');
@@ -52,7 +61,12 @@ const main = async () => {
 
   const addDest = fjp.altAssoc('destination', destination);
 
-  const genFromArgs = fjp.compose(generate, addName, addDest, merge);
+  const genFromArgs = fjp.compose(
+    generate,
+    addName,
+    addDest,
+    merge
+  );
 
   return genFromArgs(supplied, answers);
 };

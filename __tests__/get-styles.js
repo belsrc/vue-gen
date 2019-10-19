@@ -1,8 +1,9 @@
 /* eslint-disable fp-jxl/no-unused-expression, fp-jxl/no-nil */
 jest.mock('./../src/blueprints/scss-file');
 
-const getStyles = require('./../src/get-styles');
 const path = require('path');
+const getStyles = require('./../src/get-styles');
+
 const className = 'test-class';
 const dest = './';
 const expectDest = path.resolve('./', className, 'styles.scss');

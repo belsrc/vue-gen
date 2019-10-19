@@ -8,7 +8,6 @@
 [![Last Commit](https://img.shields.io/github/last-commit/belsrc/vue-gen/master.svg?logo=github&logoWidth=14&style=flat-square)](https://github.com/belsrc/vue-gen/commits/master)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/belsrc/vue-gen/pulls)
 
-
 Generate new Vue components from the command line.
 
 ## Install
