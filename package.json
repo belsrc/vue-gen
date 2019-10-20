@@ -58,7 +58,7 @@
   "devDependencies": {
     "@commitlint/cli": "8.2.0",
     "@commitlint/config-conventional": "8.2.0",
-    "conventional-changelog-cli": "2.0.23",
+    "conventional-changelog-cli": "2.0.25",
     "eslint": "6.5.0",
     "eslint-config-belsrc": "1.1.0",
     "jest": "24.9.0",
