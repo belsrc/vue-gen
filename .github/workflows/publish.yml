@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: 10
       - name: Install Packages
-        run: npm ci
+        run: npm i --no-audit --no-package-lock --no-optional
       - name: Run Linter
 
   # Run all of the unit tests
@@ -36,7 +36,7 @@ jobs:
         with:
           node-version: 10
       - name: Install Packages
-        run: npm ci
+        run: npm i --no-audit --no-package-lock --no-optional
       - name: Run Unit Tests
         run: npm run test:cov
       - name: Upload coverage to CodeClimate
@@ -80,7 +80,7 @@ jobs:
           node-version: 10
           registry-url: https://registry.npmjs.org/
           scope: '@belsrc'
-      - run: npm ci
+      - run: npm i --no-audit --no-package-lock --no-optional
       - name: Publish Package @ NPM
         run: npm publish
         env:
