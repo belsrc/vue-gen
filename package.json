@@ -2,7 +2,10 @@
   "name": "@belsrc/vue-gen",
   "version": "1.0.2",
   "description": "Yet another Vue component generator",
-  "main": "vue-gen.js",
+  "main": "dist/vue-gen.js",
+  "files": [
+    "dist"
+  ],
   "bin": {
     "vuegen": "vue-gen.js"
   },
@@ -14,9 +17,12 @@
     "lint": "npx eslint -c .eslintrc.js --fix --color --ignore-path .eslintignore \"**/*.{js,jsx,ts,tsx}\"",
     "prettier": "npx prettier --config .prettierrc.js --write \"**/*.{js,jsx,ts,tsx,md,html}\"",
     "clean": "npm-run-all prettier lint",
-    "test": "jest --verbose --passWithNoTests",
+    "test": "npm-run-all test:types test:all",
+    "test:all": "jest --verbose --passWithNoTests",
     "test:changed": "jest -o --passWithNoTests",
+    "test:types": "npx tsc",
     "coverage": "jest --verbose --coverage --passWithNoTests",
+    "build": "npx babel src --out-dir dist --ignore **/*.test.js --extensions \".ts,.tsx\"",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "standard": "standard-version --no-verify",
     "push-tags": "git push --follow-tags origin master",
@@ -28,8 +34,19 @@
     "coverageDirectory": "coverage",
     "testEnvironment": "node",
     "testPathIgnorePatterns": [
-      "/node_modules/"
-    ]
+      "/node_modules/",
+      "/dist/"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    }
   },
   "keywords": [
     "vue component generator",
@@ -52,8 +69,15 @@
   "author": "bryan@bryanckizer.com",
   "license": "MIT",
   "devDependencies": {
+    "@babel/cli": "7.6.4",
+    "@babel/core": "7.6.4",
+    "@babel/preset-env": "7.6.3",
+    "@babel/preset-typescript": "7.6.0",
+    "@babel/register": "7.6.2",
     "@commitlint/cli": "8.2.0",
     "@commitlint/config-conventional": "8.2.0",
+    "@types/jest": "24.0.20",
+    "babel-eslint": "10.0.3",
     "conventional-changelog-cli": "2.0.25",
     "cross-env": "6.0.3",
     "eslint": "6.5.1",
@@ -63,6 +87,8 @@
     "npm-run-all": "4.1.5",
     "prettier": "1.18.2",
     "standard-version": "7.0.0",
+    "ts-jest": "24.1.0",
+    "typescript": "3.6.4",
     "yorkie": "2.0.0"
   },
   "dependencies": {

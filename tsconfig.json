@@ -1,0 +1,16 @@
+{
+  "include": ["src/**/*"],
+  "compilerOptions": {
+    "module": "es6",
+    "target": "esnext",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "strict": false,
+    "noImplicitAny": false,
+    "isolatedModules": true,
+    "esModuleInterop": true
+  }
+}

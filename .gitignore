@@ -57,4 +57,5 @@ yarn-error.log*
 .nyc_output/
 coverage.lcov
 docs/
+dist/
 test-comp
