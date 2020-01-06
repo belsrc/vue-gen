@@ -66,7 +66,7 @@
     "yorkie": "2.0.0"
   },
   "dependencies": {
-    "commander": "3.0.2",
+    "commander": "4.1.0",
     "fjp": "0.2.4",
     "inquirer": "7.0.0"
   }
