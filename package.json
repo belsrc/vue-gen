@@ -68,6 +68,6 @@
   "dependencies": {
     "commander": "3.0.2",
     "fjp": "0.2.4",
-    "inquirer": "7.0.0"
+    "inquirer": "7.0.6"
   }
 }
