@@ -5,15 +5,33 @@ exports[`genScss has the expected ouput structure 1`] = `
 .test-component {}
 
 // Tablets
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+  .test-component {}
+}
 
 // Hi-Res Tablets
-@media only screen and (min-width: 1024px) {}
+@media only screen and (min-width: 1024px) {
+  .test-component {}
+}
 
 // Desktops
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 1200px) {
+  .test-component {}
+}
+
+// Mid DPI Laptop/Desktop
+@media only screen and (min-width: 1360px) {
+  .test-component {}
+}
+
+// Hi DPI Desktop
+@media only screen and (min-width: 1440px) {
+  .test-component {}
+}
 
 // Larger Desktops
-@media only screen and (min-width: 1920px) {}
+@media only screen and (min-width: 1920px) {
+  .test-component {}
+}
 "
 `;
