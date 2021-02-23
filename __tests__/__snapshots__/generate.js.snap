@@ -100,7 +100,7 @@ describe('TestComponent', () => {
     // test('should not show some selector', () => {
     //   const wrapper = shallowMount(TestComponent);
     //
-    //   const actual = wrapper.find('.class-selector).exists();
+    //   const actual = wrapper.find('.class-selector').exists();
     //
     //   expect(actual).not.toBeTruthy();
     // });
@@ -206,7 +206,7 @@ describe('TestComponent', () => {
     // test('should not show some selector', () => {
     //   const wrapper = shallowMount(TestComponent);
     //
-    //   const actual = wrapper.find('.class-selector).exists();
+    //   const actual = wrapper.find('.class-selector').exists();
     //
     //   expect(actual).not.toBeTruthy();
     // });

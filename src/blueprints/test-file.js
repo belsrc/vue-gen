@@ -46,7 +46,7 @@ describe('${ componentName }', () => {
     // test('should not show some selector', () => {
     //   const wrapper = shallowMount(${ componentName });
     //
-    //   const actual = wrapper.find('.class-selector).exists();
+    //   const actual = wrapper.find('.class-selector').exists();
     //
     //   expect(actual).not.toBeTruthy();
     // });
