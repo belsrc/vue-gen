@@ -6,6 +6,7 @@ const quietLookup = prop => {
     component: 'standard',
     state: false,
     destination: process.cwd(),
+    typescript: false,
   };
 
   /* eslint-disable fp-jxl/no-nil */

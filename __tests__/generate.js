@@ -12,6 +12,20 @@ describe('generate', () => {
       component: 'standard',
       state: true,
       destination: './',
+      typescript: false,
+    });
+
+    expect(actual).toMatchSnapshot();
+  });
+
+  test('returns expected generated output for standard typescriptjsx', async () => {
+    const actual = await generate({
+      name: 'test-component',
+      file: 'jsx',
+      component: 'standard',
+      state: true,
+      destination: './',
+      typescript: true,
     });
 
     expect(actual).toMatchSnapshot();
@@ -24,6 +38,20 @@ describe('generate', () => {
       component: 'router',
       state: false,
       destination: './',
+      typescript: false,
+    });
+
+    expect(actual).toMatchSnapshot();
+  });
+
+  test('returns expected generated output for router typescript vue', async () => {
+    const actual = await generate({
+      name: 'test-component',
+      file: 'sfc',
+      component: 'router',
+      state: false,
+      destination: './',
+      typescript: true,
     });
 
     expect(actual).toMatchSnapshot();

@@ -1,4 +1,4 @@
-module.exports = function({ name, file, component, state, functional }) {
+module.exports = function({ name, file, component, state, functional, typescript }) {
   const nameQuestion = {
     type: 'input',
     name: 'name',
@@ -15,12 +15,20 @@ module.exports = function({ name, file, component, state, functional }) {
     when: () => !file,
   };
 
+  const tsQuestion = {
+    type: 'confirm',
+    name: 'typescript',
+    message: 'Is the project using Typescript?',
+    default: false,
+    when: () => !typescript && !functional,
+  };
+
   const functionalQuestion = {
     type: 'confirm',
     name: 'functional',
     message: 'Is this a functional component?',
     default: false,
-    when: () => !functional,
+    when: answers => !functional && !typescript && !answers.typescript,
   };
 
   const componentQuestion = {
@@ -43,6 +51,7 @@ module.exports = function({ name, file, component, state, functional }) {
   return [
     nameQuestion,
     fileQuestion,
+    tsQuestion,
     functionalQuestion,
     componentQuestion,
     stateQuesiton,

@@ -3,13 +3,13 @@ const jsxFnFile = require('./blueprints/jsx-func-file');
 const vueFile = require('./blueprints/vue-file');
 const vueFnFile = require('./blueprints/vue-func-file');
 
-const genContent = (fileType, componentName, className, isPage, hasState, functional) =>
-  fileType === '.jsx' ?
+const genContent = (fileType, componentName, className, isPage, hasState, functional, typescript) =>
+  fileType === '.jsx' || fileType === '.tsx' ?
     functional ?
       jsxFnFile(componentName, className) :
-      jsxFile(componentName, className, isPage, hasState) :
+      jsxFile(componentName, className, isPage, hasState, typescript) :
     functional ?
       vueFnFile(componentName, className) :
-      vueFile(componentName, className, isPage, hasState);
+      vueFile(componentName, className, isPage, hasState, typescript);
 
 module.exports = genContent;

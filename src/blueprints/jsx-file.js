@@ -1,12 +1,21 @@
-const genJsx = (compName, className, isPage, hasState) => `import './styles.scss';
+const genJsx = (compName, className, isPage, hasState, isTs) => `import './styles.scss';
+
 ${
-  hasState ?
-    `
-import { mapState, mapGetters, mapActions } from 'vuex';
+  isTs ?
+    `import Vue, { PropType } from 'vue';
 ` :
     ''
-}
-export default {
+}${
+  hasState ?
+    `import { mapState, mapGetters, mapActions } from 'vuex';
+` :
+    ''
+}${
+  hasState || isTs ?
+    `
+` :
+    ''
+}${ isTs ? `const ${ compName } = Vue.extend({` : 'export default {' }
   name: '${ compName }',
 
   props: {},
@@ -73,7 +82,13 @@ ${
       </div>
     );
   },
-};
+${ isTs ? '})' : '}' };${
+  isTs ?
+    `
+
+export default ${ compName };` :
+    ''
+}
 `;
 
 module.exports = genJsx;

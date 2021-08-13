@@ -169,3 +169,187 @@ export default {
 };
 "
 `;
+
+exports[`genJsx has the expected ouput structure with Typescript as page and with state 1`] = `
+"import './styles.scss';
+
+import Vue, { PropType } from 'vue';
+import { mapState, mapGetters, mapActions } from 'vuex';
+
+const TestComponent = Vue.extend({
+  name: 'TestComponent',
+
+  props: {},
+
+  data() {
+    return {};
+  },
+
+  computed: {
+    ...mapState({}),
+
+    ...mapGetters({}),
+  },
+
+  watch: {},
+
+  async created() {
+    return await this.loadPageData();
+  },
+
+  mounted() {},
+
+  // When route changes and this component is already rendered, this guard is used
+  async beforeRouteUpdate(to, from, next) {
+    await this.loadPageData();
+
+    return next();
+  },
+
+  methods: {
+    ...mapActions({}),
+
+    async loadPageData() {},
+  },
+
+  render() {
+    return (
+      <div class='test-component'>
+        (ಠ益ಠ)
+      </div>
+    );
+  },
+});
+
+export default TestComponent;
+"
+`;
+
+exports[`genJsx has the expected ouput structure with Typescript as page without state 1`] = `
+"import './styles.scss';
+
+import Vue, { PropType } from 'vue';
+
+const TestComponent = Vue.extend({
+  name: 'TestComponent',
+
+  props: {},
+
+  data() {
+    return {};
+  },
+
+  computed: {},
+
+  watch: {},
+
+  async created() {
+    return await this.loadPageData();
+  },
+
+  mounted() {},
+
+  // When route changes and this component is already rendered, this guard is used
+  async beforeRouteUpdate(to, from, next) {
+    await this.loadPageData();
+
+    return next();
+  },
+
+  methods: {
+    async loadPageData() {},
+  },
+
+  render() {
+    return (
+      <div class='test-component'>
+        (ಠ益ಠ)
+      </div>
+    );
+  },
+});
+
+export default TestComponent;
+"
+`;
+
+exports[`genJsx has the expected ouput structure with Typescript not as page and without state 1`] = `
+"import './styles.scss';
+
+import Vue, { PropType } from 'vue';
+
+const TestComponent = Vue.extend({
+  name: 'TestComponent',
+
+  props: {},
+
+  data() {
+    return {};
+  },
+
+  computed: {},
+
+  watch: {},
+
+  created() {},
+
+  mounted() {},
+
+  methods: {},
+
+  render() {
+    return (
+      <div class='test-component'>
+        (ಠ益ಠ)
+      </div>
+    );
+  },
+});
+
+export default TestComponent;
+"
+`;
+
+exports[`genJsx has the expected ouput structure with Typescript not as page with state 1`] = `
+"import './styles.scss';
+
+import Vue, { PropType } from 'vue';
+import { mapState, mapGetters, mapActions } from 'vuex';
+
+const TestComponent = Vue.extend({
+  name: 'TestComponent',
+
+  props: {},
+
+  data() {
+    return {};
+  },
+
+  computed: {
+    ...mapState({}),
+
+    ...mapGetters({}),
+  },
+
+  watch: {},
+
+  created() {},
+
+  mounted() {},
+
+  methods: {
+    ...mapActions({}),
+  },
+
+  render() {
+    return (
+      <div class='test-component'>
+        (ಠ益ಠ)
+      </div>
+    );
+  },
+});
+
+export default TestComponent;
+"
+`;

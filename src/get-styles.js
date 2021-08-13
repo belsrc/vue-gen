@@ -5,7 +5,7 @@ const scssFile = require('./blueprints/scss-file');
 const SCSS_FILE = 'styles.scss';
 
 const getStyles = (fileType, destination, className) =>
-  fileType === '.jsx' ?
+  fileType === '.jsx' || fileType === '.tsx' ?
     fjp.altAssoc(path.resolve(destination, className, SCSS_FILE), scssFile(className)) :
     fjp.identity;
 

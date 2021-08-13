@@ -11,11 +11,11 @@ const genContent = require('./get-content');
 const COMPONENT_FILE = 'index';
 const isPageComp = val => val === 'router';
 
-const generate = async ({ name, file, component, state, destination, functional }) => {
+const generate = async ({ name, file, component, state, destination, functional, typescript }) => {
   const className = kebabCase(name);
   const componentName = pascalCase(name);
   const isPage = isPageComp(component);
-  const fileType = file === 'jsx' ? '.jsx' : '.vue';
+  const fileType = file === 'jsx' ? typescript ? '.tsx' : '.jsx' : '.vue';
   const compFile = `${ COMPONENT_FILE }${ fileType }`;
 
   const genFiles = fjp.compose(
@@ -23,7 +23,7 @@ const generate = async ({ name, file, component, state, destination, functional 
     getStyles(fileType, destination, className),
     fjp.altAssoc(
       path.resolve(destination, className, compFile),
-      genContent(fileType, componentName, className, isPage, state, functional)
+      genContent(fileType, componentName, className, isPage, state, functional, typescript)
     ),
     fjp.altAssoc(testPath(destination, className), testFile(componentName, compFile, functional))
   );

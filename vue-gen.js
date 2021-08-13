@@ -16,6 +16,7 @@ const main = async () => {
     .usage('[component] [destination] [options]')
     .option('--file [file type]', 'type of file [jsx | sfc]')
     .option('--component [component type]', 'type of component [standard | router]')
+    .option('-t, --typescript', 'create a component using Typescript')
     .option('-f, --functional', 'create a functional component')
     .option('-s, --state', 'adds state to component')
     .option(
@@ -25,13 +26,14 @@ const main = async () => {
     .parse(process.argv);
 
   const [ name, dest ] = cmdInput.args;
-  const { file, component, state, quiet, functional } = cmdInput;
+  const { file, component, state, quiet, functional, typescript } = cmdInput;
   const supplied = {
     name,
     file,
     component,
     state,
     functional,
+    typescript,
   };
 
   if(quiet && !name) {
@@ -42,6 +44,7 @@ const main = async () => {
     assocInput(quiet, file, 'file'),
     assocInput(quiet, component, 'component'),
     assocInput(quiet, state, 'state'),
+    assocInput(quiet, typescript, 'typescript'),
     fjp.altAssoc('destination', dest ? dest : process.cwd())
   );
 

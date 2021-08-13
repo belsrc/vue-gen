@@ -1,5 +1,134 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`generate returns expected generated output for router typescript vue 1`] = `
+Object {
+  ".//test-component/index.vue": "<script lang=\\"ts\\">
+export default {
+  name: 'TestComponent',
+
+  components: {},
+
+  props: {},
+
+  data() {
+    return {};
+  },
+
+  computed: {},
+
+  watch: {},
+
+  async created() {
+    await this.loadPageData();
+  },
+
+  mounted() {},
+
+  // When route changes and this component is already rendered, this guard is used
+  async beforeRouteUpdate(to, from, next) {
+    await this.loadPageData();
+
+    return next();
+  },
+
+  methods: {
+    async loadPageData() {},
+  },
+};
+</script>
+
+<template>
+  <div class=\\"test-component\\">
+    (ಠ益ಠ)
+  </div>
+</template>
+
+<style lang=\\"scss\\">
+  // Mobile / Baseline
+  .test-component {}
+
+  // Tablets
+  @media only screen and (min-width: 768px) {
+    .test-component {}
+  }
+
+  // Hi-Res Tablets
+  @media only screen and (min-width: 1024px) {
+    .test-component {}
+  }
+
+  // Desktops
+  @media only screen and (min-width: 1200px) {
+    .test-component {}
+  }
+
+  // Mid DPI Laptop/Desktop
+  @media only screen and (min-width: 1360px) {
+    .test-component {}
+  }
+
+  // Hi DPI Desktop
+  @media only screen and (min-width: 1440px) {
+    .test-component {}
+  }
+
+  // Larger Desktops
+  @media only screen and (min-width: 1920px) {
+    .test-component {}
+  }
+</style>
+",
+  ".//test-component/test-component.test.js": "import '@babel/register';
+import { shallowMount } from '@vue/test-utils';
+import TestComponent from '.';
+
+// Template uses Jest and Vue test utils as an example
+// npm i -D jest @vue/test-utils
+// But your free to use whatever test setup you prefer
+
+describe('TestComponent', () => {
+  beforeEach(() => {
+    jest.resetModules();
+    jest.clearAllMocks();
+  });
+
+  describe('Computed', () => {
+    // test('should have correct <computed-name> computed value', () => {
+    //   const wrapper = shallowMount(TestComponent);
+    //
+    //   const actual = wrapper.vm.<computed-name>;
+    //
+    //   expect(actual).toEqual(<value>);
+    // });
+    test.skip('NOT IMPLEMENTED', () => {});
+  });
+
+  describe('Methods', () => {
+    // test('<method-name> should return correct value', () => {
+    //   const wrapper = shallowMount(TestComponent);
+    //
+    //   const actual = wrapper.vm.<method-name>();
+    //
+    //   expect(actual).toEqual(<value>);
+    // });
+    test.skip('NOT IMPLEMENTED', () => {});
+  });
+
+  describe('Rendering', () => {
+    // test('should not show some selector', () => {
+    //   const wrapper = shallowMount(TestComponent);
+    //
+    //   const actual = wrapper.find('.class-selector').exists();
+    //
+    //   expect(actual).not.toBeTruthy();
+    // });
+    test.skip('NOT IMPLEMENTED', () => {});
+  });
+});
+",
+}
+`;
+
 exports[`generate returns expected generated output for router vue 1`] = `
 Object {
   ".//test-component/index.vue": "<script>
@@ -48,16 +177,34 @@ export default {
   .test-component {}
 
   // Tablets
-  @media only screen and (min-width: 768px) {}
+  @media only screen and (min-width: 768px) {
+    .test-component {}
+  }
 
   // Hi-Res Tablets
-  @media only screen and (min-width: 1024px) {}
+  @media only screen and (min-width: 1024px) {
+    .test-component {}
+  }
 
   // Desktops
-  @media only screen and (min-width: 1200px) {}
+  @media only screen and (min-width: 1200px) {
+    .test-component {}
+  }
+
+  // Mid DPI Laptop/Desktop
+  @media only screen and (min-width: 1360px) {
+    .test-component {}
+  }
+
+  // Hi DPI Desktop
+  @media only screen and (min-width: 1440px) {
+    .test-component {}
+  }
 
   // Larger Desktops
-  @media only screen and (min-width: 1920px) {}
+  @media only screen and (min-width: 1920px) {
+    .test-component {}
+  }
 </style>
 ",
   ".//test-component/test-component.test.js": "import '@babel/register';
@@ -150,6 +297,133 @@ export default {
     );
   },
 };
+",
+  ".//test-component/styles.scss": "// Mobile / Baseline
+.test-component {}
+
+// Tablets
+@media only screen and (min-width: 768px) {
+  .test-component {}
+}
+
+// Hi-Res Tablets
+@media only screen and (min-width: 1024px) {
+  .test-component {}
+}
+
+// Desktops
+@media only screen and (min-width: 1200px) {
+  .test-component {}
+}
+
+// Mid DPI Laptop/Desktop
+@media only screen and (min-width: 1360px) {
+  .test-component {}
+}
+
+// Hi DPI Desktop
+@media only screen and (min-width: 1440px) {
+  .test-component {}
+}
+
+// Larger Desktops
+@media only screen and (min-width: 1920px) {
+  .test-component {}
+}
+",
+  ".//test-component/test-component.test.js": "import '@babel/register';
+import { shallowMount } from '@vue/test-utils';
+import TestComponent from '.';
+
+// Template uses Jest and Vue test utils as an example
+// npm i -D jest @vue/test-utils
+// But your free to use whatever test setup you prefer
+
+describe('TestComponent', () => {
+  beforeEach(() => {
+    jest.resetModules();
+    jest.clearAllMocks();
+  });
+
+  describe('Computed', () => {
+    // test('should have correct <computed-name> computed value', () => {
+    //   const wrapper = shallowMount(TestComponent);
+    //
+    //   const actual = wrapper.vm.<computed-name>;
+    //
+    //   expect(actual).toEqual(<value>);
+    // });
+    test.skip('NOT IMPLEMENTED', () => {});
+  });
+
+  describe('Methods', () => {
+    // test('<method-name> should return correct value', () => {
+    //   const wrapper = shallowMount(TestComponent);
+    //
+    //   const actual = wrapper.vm.<method-name>();
+    //
+    //   expect(actual).toEqual(<value>);
+    // });
+    test.skip('NOT IMPLEMENTED', () => {});
+  });
+
+  describe('Rendering', () => {
+    // test('should not show some selector', () => {
+    //   const wrapper = shallowMount(TestComponent);
+    //
+    //   const actual = wrapper.find('.class-selector').exists();
+    //
+    //   expect(actual).not.toBeTruthy();
+    // });
+    test.skip('NOT IMPLEMENTED', () => {});
+  });
+});
+",
+}
+`;
+
+exports[`generate returns expected generated output for standard typescriptjsx 1`] = `
+Object {
+  ".//test-component/index.tsx": "import './styles.scss';
+
+import Vue, { PropType } from 'vue';
+import { mapState, mapGetters, mapActions } from 'vuex';
+
+const TestComponent = Vue.extend({
+  name: 'TestComponent',
+
+  props: {},
+
+  data() {
+    return {};
+  },
+
+  computed: {
+    ...mapState({}),
+
+    ...mapGetters({}),
+  },
+
+  watch: {},
+
+  created() {},
+
+  mounted() {},
+
+  methods: {
+    ...mapActions({}),
+  },
+
+  render() {
+    return (
+      <div class='test-component'>
+        (ಠ益ಠ)
+      </div>
+    );
+  },
+});
+
+export default TestComponent;
 ",
   ".//test-component/styles.scss": "// Mobile / Baseline
 .test-component {}
