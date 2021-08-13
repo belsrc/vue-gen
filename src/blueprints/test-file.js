@@ -1,6 +1,6 @@
 const genTest = (componentName, compFile, isFunctional) => `import '@babel/register';
 import { shallowMount } from '@vue/test-utils';
-import ${ componentName } from './${ compFile }';
+import ${ componentName } from '.';
 
 // Template uses Jest and Vue test utils as an example
 // npm i -D jest @vue/test-utils

@@ -3,7 +3,7 @@
 exports[`genTest has the expected ouput structure 1`] = `
 "import '@babel/register';
 import { shallowMount } from '@vue/test-utils';
-import TestComponent from './test-component';
+import TestComponent from '.';
 
 // Template uses Jest and Vue test utils as an example
 // npm i -D jest @vue/test-utils
@@ -54,7 +54,7 @@ describe('TestComponent', () => {
 exports[`genTest has the expected ouput structure when functional 1`] = `
 "import '@babel/register';
 import { shallowMount } from '@vue/test-utils';
-import TestComponent from './test-component';
+import TestComponent from '.';
 
 // Template uses Jest and Vue test utils as an example
 // npm i -D jest @vue/test-utils

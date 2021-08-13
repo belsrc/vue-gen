@@ -62,7 +62,7 @@ export default {
 ",
   ".//test-component/test-component.test.js": "import '@babel/register';
 import { shallowMount } from '@vue/test-utils';
-import TestComponent from './index.vue';
+import TestComponent from '.';
 
 // Template uses Jest and Vue test utils as an example
 // npm i -D jest @vue/test-utils
@@ -186,7 +186,7 @@ export default {
 ",
   ".//test-component/test-component.test.js": "import '@babel/register';
 import { shallowMount } from '@vue/test-utils';
-import TestComponent from './index.jsx';
+import TestComponent from '.';
 
 // Template uses Jest and Vue test utils as an example
 // npm i -D jest @vue/test-utils
