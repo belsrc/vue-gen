@@ -2,12 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [1.0.3](https://github.com/belsrc/vue-gen/compare/v1.0.2...v1.0.3) (2021-02-23)
+## [1.1.0](https://github.com/belsrc/vue-gen/compare/v1.0.3...v1.1.0) (2021-08-13)
 
+
+### Features
+
+* add simple typscript support ([021df22](https://github.com/belsrc/vue-gen/commit/021df22d8833badad228a29ff530fc27dbe92e5e))
+
+### [1.0.3](https://github.com/belsrc/vue-gen/compare/v1.0.2...v1.0.3) (2021-02-23)
 
 ### Bug Fixes
 
-* test file blueprint string ([d728aca](https://github.com/belsrc/vue-gen/commit/d728acaac91acef0f67c20e1eb7b0b937d19097c))
+- test file blueprint string ([d728aca](https://github.com/belsrc/vue-gen/commit/d728acaac91acef0f67c20e1eb7b0b937d19097c))
 
 ### [1.0.2](https://github.com/belsrc/vue-gen/compare/v1.0.1...v1.0.2) (2019-09-30)
 
